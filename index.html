@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny Singh | Operations & Business Analytics | MBA (Operations)</title>
+    <meta name="description" content="Portfolio of Sunny Singh — Operations & Business Analytics specialist, MBA (Operations). Skilled in Excel-based MIS reporting, Power BI, process coordination, store operations, and data analytics.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231d4ed8'/><text x='50%' y='65%' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold' font-size='50'>SS</text></svg>">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        dark: {
+                            bg: '#0A0E17',
+                            card: '#111827',
+                            border: '#1F2937',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts: Outfit (Headings) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Glassmorphism Styles */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .dark .glass-panel {
+            background: rgba(17, 24, 39, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(31, 41, 55, 0.8);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.85);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .dark .glass-card {
+            background: rgba(17, 24, 39, 0.82);
+            border: 1px solid rgba(31, 41, 55, 0.85);
+        }
+        .glass-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 32px -8px rgba(37, 99, 235, 0.12);
+        }
+        .dark .glass-card:hover {
+            box-shadow: 0 16px 32px -8px rgba(59, 130, 246, 0.15);
+        }
+
+        /* Subtle Ambient Glow */
+        .glow-accent {
+            position: absolute;
+            width: 480px;
+            height: 480px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, rgba(16, 185, 129, 0.05) 50%, transparent 70%);
+            filter: blur(40px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(156, 163, 175, 0.5);
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: rgba(75, 85, 99, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-dark-bg text-slate-800 dark:text-slate-100 transition-colors duration-300 antialiased overflow-x-hidden">
+
+    <!-- Sticky Navigation Header -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 bg-white/85 dark:bg-slate-900/85 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <!-- Brand Identity -->
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-700 via-indigo-600 to-emerald-500 flex items-center justify-center text-white font-extrabold text-base shadow-md shadow-blue-600/20 group-hover:scale-105 transition-transform">
+                        SS
+                    </div>
+                    <div>
+                        <span class="font-heading font-bold text-base tracking-tight text-slate-900 dark:text-white block group-hover:text-blue-600 transition-colors">
+                            Sunny Singh
+                        </span>
+                        <span class="text-[11px] text-slate-500 dark:text-slate-400 block font-medium">
+                            Operations & Business Analytics
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-1.5 p-1 rounded-full bg-slate-200/60 dark:bg-slate-800/70 border border-slate-300/40 dark:border-slate-700/40 text-xs font-medium">
+                    <a href="#about" class="px-3.5 py-1.5 rounded-full text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-white dark:hover:bg-slate-700 transition-all">About</a>
+                    <a href="#journey" class="px-3.5 py-1.5 rounded-full text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-white dark:hover:bg-slate-700 transition-all">Experience & Education</a>
+                    <a href="#analytics-hub" class="px-3.5 py-1.5 rounded-full text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-white dark:hover:bg-slate-700 transition-all">Analytics & MIS Hub</a>
+                    <a href="#projects" class="px-3.5 py-1.5 rounded-full text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-white dark:hover:bg-slate-700 transition-all">Case Studies</a>
+                    <a href="#skills" class="px-3.5 py-1.5 rounded-full text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-white dark:hover:bg-slate-700 transition-all">Competencies</a>
+                    <a href="#contact" class="px-3.5 py-1.5 rounded-full text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-white dark:hover:bg-slate-700 transition-all">Contact</a>
+                </nav>
+
+                <!-- Actions Strip -->
+                <div class="flex items-center gap-3">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" aria-label="Toggle Theme" class="w-10 h-10 rounded-xl glass-panel flex items-center justify-center text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all hover:scale-105">
+                        <span id="theme-icon">🌙</span>
+                    </button>
+
+                    <!-- Direct Connect Phone CTA -->
+                    <a href="tel:9599428648" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold glass-panel text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 transition-all">
+                        <span>📞</span>
+                        <span>9599428648</span>
+                    </a>
+
+                    <!-- Email CTA -->
+                    <a href="mailto:sunnymksingh17@gmail.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-600/20 transition-all hover:scale-105">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <span>Hire Me</span>
+                    </a>
+
+                    <!-- Mobile Drawer Toggle -->
+                    <button id="mobile-menu-btn" class="md:hidden w-10 h-10 rounded-xl glass-panel flex items-center justify-center text-slate-700 dark:text-slate-200 text-lg">
+                        ☰
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-3 p-4 rounded-2xl glass-panel space-y-2 border border-slate-200 dark:border-slate-800 shadow-xl">
+                <a href="#about" class="block px-4 py-2 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-blue-50 dark:hover:bg-blue-950/40 hover:text-blue-600">About</a>
+                <a href="#journey" class="block px-4 py-2 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-blue-50 dark:hover:bg-blue-950/40 hover:text-blue-600">Experience & Education</a>
+                <a href="#analytics-hub" class="block px-4 py-2 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-blue-50 dark:hover:bg-blue-950/40 hover:text-blue-600">Analytics & MIS Hub</a>
+                <a href="#projects" class="block px-4 py-2 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-blue-50 dark:hover:bg-blue-950/40 hover:text-blue-600">Case Studies</a>
+                <a href="#skills" class="block px-4 py-2 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-blue-50 dark:hover:bg-blue-950/40 hover:text-blue-600">Competencies</a>
+                <a href="#contact" class="block px-4 py-2 rounded-xl text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-blue-50 dark:hover:bg-blue-950/40 hover:text-blue-600">Contact</a>
+                <div class="pt-2 border-t border-slate-200 dark:border-slate-800 flex gap-2">
+                    <a href="tel:9599428648" class="flex-1 py-2.5 rounded-xl text-center text-xs font-semibold glass-panel text-slate-800 dark:text-slate-200">Call: 9599428648</a>
+                    <a href="mailto:sunnymksingh17@gmail.com" class="flex-1 py-2.5 rounded-xl text-center text-xs font-semibold bg-blue-600 text-white">Email Sunny</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="pt-32 pb-20 lg:pt-40 lg:pb-28 relative overflow-hidden">
+            <div class="glow-accent top-10 -left-20"></div>
+            <div class="glow-accent top-40 -right-20"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Hero Content (7 Cols) -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <!-- Status Badge -->
+                        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-xs font-medium bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-500/30 text-emerald-800 dark:text-emerald-300 shadow-sm">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                            <span>⚡ Available Immediately • Open to Relocation • Operations & MIS Roles</span>
+                        </div>
+
+                        <!-- Main Headline -->
+                        <div>
+                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.1]">
+                                Hi, I'm <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-500 bg-clip-text text-transparent">Sunny Singh</span>
+                            </h1>
+                            <p class="mt-3 text-lg sm:text-xl font-medium text-slate-600 dark:text-slate-300">
+                                Operations & Business Analytics | MBA (Operations) '27
+                            </p>
+                        </div>
+
+                        <!-- Summary Narrative -->
+                        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl font-normal">
+                            MBA in Operations candidate with proven execution experience across <strong class="font-semibold text-slate-900 dark:text-white">retail store operations (Flipkart Minutes)</strong>, <strong class="font-semibold text-slate-900 dark:text-white">sales management (SR Info Solution)</strong>, and <strong class="font-semibold text-slate-900 dark:text-white">customer care (Cyfuture India)</strong>. Specialized in <strong class="font-semibold text-slate-900 dark:text-white">Excel-based MIS reporting</strong>, Power BI dashboards, KPI tracking, and operational audits. Seeking to drive efficiency in an <strong class="font-semibold text-slate-900 dark:text-white">Operations / Business Analyst / MIS role</strong>.
+                        </p>
+
+                        <!-- Arranged Metrics Bar (4 Pillars) -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 py-3 border-y border-slate-200 dark:border-slate-800/80 max-w-2xl">
+                            <div class="p-2.5 rounded-xl bg-slate-100/60 dark:bg-slate-900/40">
+                                <div class="font-heading font-bold text-lg text-blue-600 dark:text-blue-400">Flipkart M.</div>
+                                <div class="text-[11px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-medium">Asst. Store Manager</div>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-slate-100/60 dark:bg-slate-900/40">
+                                <div class="font-heading font-bold text-lg text-indigo-600 dark:text-indigo-400">MBA '27</div>
+                                <div class="text-[11px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-medium">Mangalmay MIMT</div>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-slate-100/60 dark:bg-slate-900/40">
+                                <div class="font-heading font-bold text-lg text-emerald-600 dark:text-emerald-400">Advanced MIS</div>
+                                <div class="text-[11px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-medium">Excel & Power BI</div>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-slate-100/60 dark:bg-slate-900/40">
+                                <div class="font-heading font-bold text-lg text-amber-600 dark:text-amber-400">Immediate</div>
+                                <div class="text-[11px] text-slate-500 dark:text-slate-400 uppercase tracking-wider font-medium">Ready to Join</div>
+                            </div>
+                        </div>
+
+                        <!-- Action CTAs -->
+                        <div class="flex flex-wrap items-center gap-4 pt-1">
+                            <a href="#contact" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-600/25 transition-all hover:scale-[1.02]">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                                <span>Connect with Sunny</span>
+                            </a>
+
+                            <a href="#analytics-hub" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm glass-panel hover:bg-slate-200/60 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 transition-all hover:scale-[1.02]">
+                                <span>Explore MIS & Analytics &rarr;</span>
+                            </a>
+
+                            <a href="https://linkedin.com/in/sunny-singh-mba" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl font-semibold text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                                <span>LinkedIn Profile</span>
+                                <span class="text-xs">↗</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Executive Dossier Card (5 Cols) -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-sm">
+                            <div class="glass-card p-6 rounded-3xl relative overflow-hidden shadow-2xl border border-slate-200/80 dark:border-slate-700/60">
+                                
+                                <!-- Executive Header Banner -->
+                                <div class="rounded-2xl bg-gradient-to-br from-blue-700 via-indigo-900 to-slate-950 p-6 text-white text-center relative overflow-hidden mb-5">
+                                    <div class="absolute -right-8 -top-8 w-28 h-28 bg-blue-500/20 rounded-full blur-xl"></div>
+                                    <div class="absolute -left-8 -bottom-8 w-28 h-28 bg-emerald-500/20 rounded-full blur-xl"></div>
+                                    
+                                    <!-- Initials Avatar -->
+                                    <div class="w-24 h-24 mx-auto rounded-2xl bg-gradient-to-tr from-blue-500 via-indigo-500 to-emerald-400 p-1 shadow-xl shadow-blue-900/40 mb-3 flex items-center justify-center">
+                                        <div class="w-full h-full rounded-[14px] bg-slate-950 flex flex-col items-center justify-center">
+                                            <span class="font-heading font-black text-3xl tracking-tight text-white">SS</span>
+                                            <span class="text-[9px] uppercase tracking-widest text-emerald-400 font-bold">OPERATIONS</span>
+                                        </div>
+                                    </div>
+
+                                    <h2 class="font-heading font-bold text-xl text-white">Sunny Singh</h2>
+                                    <p class="text-xs text-blue-200 font-medium mt-0.5">Operations & Business Analytics</p>
+                                    
+                                    <div class="mt-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-[11px] font-semibold text-emerald-300 border border-white/10">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                        <span>Immediate Joining Available</span>
+                                    </div>
+                                </div>
+
+                                <!-- Executive Snapshot Details -->
+                                <div class="space-y-3 text-xs">
+                                    <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-100/60 dark:bg-slate-900/50">
+                                        <span class="text-slate-500 dark:text-slate-400 font-medium">📍 Location</span>
+                                        <span class="font-semibold text-slate-800 dark:text-slate-200">Greater Noida, UP</span>
+                                    </div>
+                                    <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-100/60 dark:bg-slate-900/50">
+                                        <span class="text-slate-500 dark:text-slate-400 font-medium">🎓 Qualification</span>
+                                        <span class="font-semibold text-blue-600 dark:text-blue-400">MBA – Operations ('27)</span>
+                                    </div>
+                                    <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-100/60 dark:bg-slate-900/50">
+                                        <span class="text-slate-500 dark:text-slate-400 font-medium">📊 Primary Tool</span>
+                                        <span class="font-semibold text-emerald-600 dark:text-emerald-400">Advanced MS Excel & Power BI</span>
+                                    </div>
+                                    <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-100/60 dark:bg-slate-900/50">
+                                        <span class="text-slate-500 dark:text-slate-400 font-medium">🗣️ Languages</span>
+                                        <span class="font-semibold text-slate-800 dark:text-slate-200">Hindi, English</span>
+                                    </div>
+                                </div>
+
+                                <!-- Quick Connect Links -->
+                                <div class="mt-5 pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2">
+                                    <a href="mailto:sunnymksingh17@gmail.com" class="flex-1 py-2 rounded-xl bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 text-center font-semibold text-xs hover:bg-blue-100 transition-colors">
+                                        Email Direct
+                                    </a>
+                                    <a href="https://linkedin.com/in/sunny-singh-mba" target="_blank" rel="noopener noreferrer" class="flex-1 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-center font-semibold text-xs hover:text-blue-600 transition-colors">
+                                        LinkedIn
+                                    </a>
+                                    <a href="https://naukri.com/mnjuser/profile" target="_blank" rel="noopener noreferrer" class="flex-1 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-center font-semibold text-xs hover:text-blue-600 transition-colors">
+                                        Naukri
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 border-t border-slate-200 dark:border-slate-800/80 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-xs font-semibold text-blue-600 dark:text-blue-400 tracking-wider uppercase">Executive Profile</span>
+                    <h2 class="text-3xl sm:text-4xl font-heading font-bold text-slate-900 dark:text-white mt-1">Profile Summary & Focus</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base mt-2">Harmonizing quantitative business analytics with rigorous operational workflows and store execution.</p>
+                </div>
+
+                <div class="grid md:grid-cols-12 gap-10 items-center">
+                    
+                    <!-- Left Visual Card (4 Cols) -->
+                    <div class="md:col-span-4 flex justify-center">
+                        <div class="glass-card p-6 rounded-3xl text-center max-w-xs w-full shadow-lg border border-slate-200 dark:border-slate-800">
+                            <div class="w-36 h-36 mx-auto rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-emerald-500 p-1 mb-4 flex items-center justify-center shadow-lg">
+                                <div class="w-full h-full rounded-[14px] bg-slate-900 flex flex-col items-center justify-center text-white">
+                                    <span class="text-3xl">📈</span>
+                                    <span class="font-heading font-bold text-sm mt-1 text-slate-200">Operations</span>
+                                </div>
+                            </div>
+                            <h3 class="font-heading font-bold text-lg text-slate-900 dark:text-white">Sunny Singh</h3>
+                            <p class="text-xs font-semibold text-blue-600 dark:text-blue-400 mt-0.5">MBA in Operations (2025–2027)</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Mangalmay Institute of Management and Technology</p>
+                            
+                            <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800 flex justify-center gap-3 text-xs font-semibold text-slate-600 dark:text-slate-400">
+                                <span>Greater Noida, UP</span>
+                                <span>•</span>
+                                <span class="text-emerald-600 dark:text-emerald-400 font-medium">BBA '25 | MBA '27</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Narrative (8 Cols) -->
+                    <div class="md:col-span-8 space-y-5">
+                        <h3 class="text-2xl font-heading font-bold text-slate-900 dark:text-white">
+                            Driving Operational Excellence Through Data-Driven MIS & Process Governance
+                        </h3>
+                        
+                        <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
+                            I am an <strong class="font-semibold text-slate-900 dark:text-white">MBA (Operations) candidate</strong> with hands-on professional experience spanning retail dark store operations, end-to-end sales lifecycle execution, and customer experience management. My background is rooted in business processes, performance monitoring, and analytical problem-solving rather than traditional software development.
+                        </p>
+
+                        <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base">
+                            At <strong class="font-semibold text-slate-900 dark:text-white">Flipkart Minutes</strong>, I supported daily rapid store operations, monitored order flow picking velocity, enforced operational compliance through audits, and led shift handovers with cash-on-delivery (COD) reconciliation. At <strong class="font-semibold text-slate-900 dark:text-white">SR Info Solution</strong> and <strong class="font-semibold text-slate-900 dark:text-white">Cyfuture India</strong>, I maintained comprehensive Excel MIS reports, coordinated cross-functional execution, and resolved critical customer and lead touchpoints.
+                        </p>
+
+                        <!-- Pillars Grid -->
+                        <div class="grid sm:grid-cols-2 gap-4 pt-1">
+                            <div class="p-4 rounded-xl glass-panel">
+                                <div class="font-heading font-semibold text-sm text-slate-900 dark:text-white flex items-center gap-2 mb-1">
+                                    <span class="text-blue-600">📊</span>
+                                    <span>MIS Reporting & Business Analytics</span>
+                                </div>
+                                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    Advanced MS Excel (Pivot Tables, VLOOKUP/XLOOKUP, Nested Formulas), Power BI visualization, and performance tracking models.
+                                </p>
+                            </div>
+                            <div class="p-4 rounded-xl glass-panel">
+                                <div class="font-heading font-semibold text-sm text-slate-900 dark:text-white flex items-center gap-2 mb-1">
+                                    <span class="text-emerald-600">🏬</span>
+                                    <span>Store Operations & Process Management</span>
+                                </div>
+                                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    Order queue balancing, picking audits, shift handover protocols, COD dispatch tracking, and SLA bottleneck mitigation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabbed Journey Section (Experience + Education) -->
+        <section id="journey" class="py-20 bg-slate-100/60 dark:bg-slate-900/30 border-t border-slate-200 dark:border-slate-800 relative">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <span class="text-xs font-semibold text-blue-600 dark:text-blue-400 tracking-wider uppercase">Career Progression</span>
+                    <h2 class="text-3xl sm:text-4xl font-heading font-bold text-slate-900 dark:text-white mt-1">Professional Experience & Academic Journey</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">Verified industry roles across retail operations, sales execution, and academic qualifications.</p>
+                </div>
+
+                <!-- Tab Switcher Bar -->
+                <div class="flex justify-center mb-10">
+                    <div class="inline-flex p-1.5 rounded-2xl bg-slate-200/80 dark:bg-slate-800/90 border border-slate-300/60 dark:border-slate-700/60 shadow-inner">
+                        <button id="tab-btn-exp" class="journey-tab-btn flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-md">
+                            <span>💼</span>
+                            <span>Work Experience (3 Roles)</span>
+                        </button>
+                        <button id="tab-btn-edu" class="journey-tab-btn flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+                            <span>🎓</span>
+                            <span>Education & Degrees (2)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tab Panel 1: Industry Experience -->
+                <div id="tab-panel-exp" class="space-y-6">
+                    
+                    <!-- Role 1: Flipkart Minutes -->
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl border-l-4 border-l-blue-600 shadow-sm">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-11 h-11 rounded-xl bg-blue-600/10 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-xl">
+                                    🛒
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-heading font-bold text-slate-900 dark:text-white">Assistant Store Manager (Intern)</h3>
+                                    <p class="text-xs font-semibold text-blue-600 dark:text-blue-400">Flipkart Minutes · Quick Commerce & Retail Operations</p>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-400 rounded-full text-xs font-bold uppercase tracking-wider border border-blue-500/20">
+                                Jun 2026 – Aug 2026
+                            </span>
+                        </div>
+                        <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 list-disc list-inside mt-3 leading-relaxed">
+                            <li>Supported end-to-end daily store operations, maintaining smooth order flow routing and active floor team coordination.</li>
+                            <li>Monitored picking activities and conducted regular operational audits to uphold inventory accuracy and minimize SLA breaches.</li>
+                            <li>Managed seamless shift handovers, verified order reconciliation, and supported Cash on Delivery (COD) dispatch processes with zero variance.</li>
+                        </ul>
+                        <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800/80 flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 rounded-lg text-xs font-medium border border-blue-200 dark:border-blue-800/60">Store Operations</span>
+                            <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 rounded-lg text-xs font-medium border border-blue-200 dark:border-blue-800/60">Order Flow & SLAs</span>
+                            <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 rounded-lg text-xs font-medium border border-blue-200 dark:border-blue-800/60">Picking Audits</span>
+                            <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 rounded-lg text-xs font-medium border border-blue-200 dark:border-blue-800/60">COD Reconciliation</span>
+                            <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 rounded-lg text-xs font-medium border border-blue-200 dark:border-blue-800/60">Team Coordination</span>
+                        </div>
+                    </div>
+
+                    <!-- Role 2: SR Info Solution Pvt. Ltd. -->
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl border-l-4 border-l-indigo-600 shadow-sm">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-11 h-11 rounded-xl bg-indigo-600/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-xl">
+                                    📊
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-heading font-bold text-slate-900 dark:text-white">Sales Executive</h3>
+                                    <p class="text-xs font-semibold text-indigo-600 dark:text-indigo-400">SR Info Solution Pvt. Ltd. · Sales & MIS Operations</p>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 bg-indigo-50 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-400 rounded-full text-xs font-semibold uppercase tracking-wider">
+                                Jun 2025 – Dec 2025
+                            </span>
+                        </div>
+                        <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 list-disc list-inside mt-3 leading-relaxed">
+                            <li>Handled direct customer interactions, qualification, follow-ups, and end-to-end sales activities across diverse client touchpoints.</li>
+                            <li>Maintained robust sales data databases and structured MIS reports in MS Excel for monitoring key conversion metrics, team performance, and monthly target attainment.</li>
+                            <li>Coordinated with internal logistics and account teams to guarantee friction-free order fulfillment and service provisioning.</li>
+                        </ul>
+                        <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800/80 flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 bg-indigo-50 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-300 rounded-lg text-xs font-medium">MIS Reporting (Excel)</span>
+                            <span class="px-2.5 py-1 bg-indigo-50 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-300 rounded-lg text-xs font-medium">Lead Follow-ups</span>
+                            <span class="px-2.5 py-1 bg-indigo-50 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-300 rounded-lg text-xs font-medium">Target Tracking</span>
+                            <span class="px-2.5 py-1 bg-indigo-50 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-300 rounded-lg text-xs font-medium">Internal Team Coordination</span>
+                        </div>
+                    </div>
+
+                    <!-- Role 3: Cyfuture India Pvt. Ltd. -->
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl border-l-4 border-l-emerald-600 shadow-sm">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-11 h-11 rounded-xl bg-emerald-600/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xl">
+                                    🎧
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-heading font-bold text-slate-900 dark:text-white">Customer Care Executive</h3>
+                                    <p class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Cyfuture India Pvt. Ltd. · Customer Relationship & Operations</p>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 rounded-full text-xs font-semibold uppercase tracking-wider">
+                                Jan 2025 – Apr 2025
+                            </span>
+                        </div>
+                        <ul class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 list-disc list-inside mt-3 leading-relaxed">
+                            <li>Addressed incoming customer inquiries, complex escalations, and grievance resolutions, ensuring adherence to quality standards and high first-contact satisfaction.</li>
+                            <li>Maintained precise customer interaction records, updating CRM data logs in real time to guarantee organizational data transparency.</li>
+                            <li>Coordinated with relevant internal departments to expedite ticket turnaround and resolve root operational issues.</li>
+                        </ul>
+                        <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-800/80 flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-xs font-medium">Customer Service Operations</span>
+                            <span class="px-2.5 py-1 bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-xs font-medium">CRM Data Logs</span>
+                            <span class="px-2.5 py-1 bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-xs font-medium">Query Resolution</span>
+                            <span class="px-2.5 py-1 bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-xs font-medium">Quality Monitoring</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Tab Panel 2: Academic Background -->
+                <div id="tab-panel-edu" class="space-y-6 hidden">
+                    
+                    <!-- MBA - Operations -->
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl border-l-4 border-l-blue-600 shadow-sm">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                            <span class="px-3.5 py-1.5 bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-400 rounded-full text-xs font-bold uppercase tracking-wider">
+                                2025 – 2027 (Ongoing)
+                            </span>
+                            <span class="text-xs font-medium text-slate-500 dark:text-slate-400">Mangalmay Institute of Management and Technology</span>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-slate-900 dark:text-white">
+                            Master of Business Administration (MBA) – Operations
+                        </h3>
+                        <p class="text-xs font-semibold text-blue-600 dark:text-blue-400 mb-3">
+                            Specialization: Operations Management & Business Analytics
+                        </p>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Comprehensive postgraduate management curriculum focusing on Supply Chain Strategy, Operations Management, Quantitative Techniques, Business Analytics, Process Re-engineering, and Management Information Systems (MIS).
+                        </p>
+                    </div>
+
+                    <!-- BBA - Marketing -->
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl border-l-4 border-l-indigo-600 shadow-sm">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                            <span class="px-3.5 py-1.5 bg-indigo-50 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-400 rounded-full text-xs font-bold uppercase tracking-wider">
+                                2022 – 2025
+                            </span>
+                            <span class="text-xs font-medium text-slate-500 dark:text-slate-400">Mangalmay Institute of Management and Technology</span>
+                        </div>
+                        <h3 class="text-xl font-heading font-bold text-slate-900 dark:text-white">
+                            Bachelor of Business Administration (BBA) – Marketing
+                        </h3>
+                        <p class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 mb-3">
+                            Foundation in Commercial Strategy & Market Research
+                        </p>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Undergraduate business degree covering Consumer Behavior, Sales & Distribution Management, Market Analytics, Business Communication, and Organizational Dynamics.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Operations & MIS Command Center (Replaces Tech Coding Hub) -->
+        <section id="analytics-hub" class="py-20 bg-slate-100/70 dark:bg-slate-900/40 border-t border-slate-200 dark:border-slate-800 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-xs font-semibold text-blue-600 dark:text-blue-400 tracking-wider uppercase">Analytics & Process Hub</span>
+                    <h2 class="text-3xl sm:text-4xl font-heading font-bold text-slate-900 dark:text-white mt-1">MIS & Operational Intelligence Center</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">Demonstrating practical proficiency in spreadsheet modeling, KPI dashboards, and retail dark store operational control.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- Left: Excel & MIS Competency Dashboard (6 Cols) -->
+                    <div class="lg:col-span-6 glass-card p-6 sm:p-8 rounded-3xl border-t-4 border-t-emerald-500 shadow-md">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xl">
+                                    📑
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-xl text-slate-900 dark:text-white">Advanced MS Excel & MIS</h3>
+                                    <p class="text-xs font-medium text-emerald-600 dark:text-emerald-400">Reporting Architectures & Data Models</p>
+                                </div>
+                            </div>
+                            <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+                                Core Specialty
+                            </span>
+                        </div>
+
+                        <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                            Specialized in transforming unstructured operational data into automated, decision-ready MIS reports using advanced Excel functions and interactive visualizations.
+                        </p>
+
+                        <!-- Excel Capabilities Grid -->
+                        <div class="space-y-3 mb-6 p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+                            <!-- Feature 1 -->
+                            <div>
+                                <div class="flex justify-between text-xs font-medium mb-1">
+                                    <span class="text-emerald-600 dark:text-emerald-400 font-semibold">VLOOKUP, XLOOKUP & Index-Match</span>
+                                    <span class="text-slate-700 dark:text-slate-300 font-bold">Advanced (100%)</span>
+                                </div>
+                                <div class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-emerald-500 h-full rounded-full" style="width: 95%;"></div>
+                                </div>
+                            </div>
+
+                            <!-- Feature 2 -->
+                            <div>
+                                <div class="flex justify-between text-xs font-medium mb-1">
+                                    <span class="text-blue-600 dark:text-blue-400 font-semibold">Pivot Tables, Dynamic Slicers & Calculated Fields</span>
+                                    <span class="text-slate-700 dark:text-slate-300 font-bold">Advanced (95%)</span>
+                                </div>
+                                <div class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-blue-500 h-full rounded-full" style="width: 92%;"></div>
+                                </div>
+                            </div>
+
+                            <!-- Feature 3 -->
+                            <div>
+                                <div class="flex justify-between text-xs font-medium mb-1">
+                                    <span class="text-indigo-600 dark:text-indigo-400 font-semibold">Power BI Dashboards & Visualizations</span>
+                                    <span class="text-slate-700 dark:text-slate-300 font-bold">Proficient (88%)</span>
+                                </div>
+                                <div class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-indigo-500 h-full rounded-full" style="width: 88%;"></div>
+                                </div>
+                            </div>
+
+                            <!-- Feature 4 -->
+                            <div>
+                                <div class="flex justify-between text-xs font-medium mb-1">
+                                    <span class="text-amber-600 dark:text-amber-400 font-semibold">Data Cleaning, Deduplication & Validation</span>
+                                    <span class="text-slate-700 dark:text-slate-300 font-bold">Proficient (90%)</span>
+                                </div>
+                                <div class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-amber-500 h-full rounded-full" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Verified Functional Tags -->
+                        <div class="mb-5">
+                            <p class="text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">Key Reporting Outputs</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 rounded-lg text-xs font-semibold border border-emerald-300 dark:border-emerald-800/60 flex items-center gap-1.5">
+                                    <span>📊</span>
+                                    <span>Daily Sales MIS Tracker</span>
+                                </span>
+                                <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 rounded-lg text-xs font-semibold border border-blue-200 dark:border-blue-900/60 flex items-center gap-1.5">
+                                    <span>⏱️</span>
+                                    <span>Order SLA & Picking Reports</span>
+                                </span>
+                                <span class="px-2.5 py-1 bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 rounded-lg text-xs font-semibold border border-amber-300 dark:border-amber-800/60 flex items-center gap-1.5">
+                                    <span>💰</span>
+                                    <span>COD Shift Reconciliations</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 rounded-xl bg-emerald-50/70 dark:bg-emerald-950/30 border border-emerald-500/20 text-xs text-emerald-800 dark:text-emerald-300 flex items-center gap-2">
+                            <span>✅</span>
+                            <span>Adept at translating raw spreadsheets into structured executive summaries.</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Retail Store Operations & Dark Store Metrics (6 Cols) -->
+                    <div class="lg:col-span-6 glass-card p-6 sm:p-8 rounded-3xl border-t-4 border-t-blue-600 shadow-md">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-2xl bg-blue-600/10 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-xl">
+                                    🏪
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-xl text-slate-900 dark:text-white">Store & Operations Control</h3>
+                                    <p class="text-xs font-medium text-blue-600 dark:text-blue-400">Quick-Commerce & Retail Management</p>
+                                </div>
+                            </div>
+                            <span class="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
+                                Flipkart Minutes
+                            </span>
+                        </div>
+
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">
+                            Operational execution principles refined in high-velocity micro-fulfillment / dark store environments.
+                        </p>
+
+                        <!-- Operational Focus Cards -->
+                        <div class="space-y-3 mb-6">
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-heading font-semibold text-xs text-slate-900 dark:text-white">
+                                        📦 Order Flow & Picking SLA Governance
+                                    </span>
+                                    <span class="text-[10px] font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50 px-2 py-0.5 rounded">
+                                        Speed & Precision
+                                    </span>
+                                </div>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">Supervising pick-pack queues to prevent SLA drop-offs and dispatch delays.</p>
+                            </div>
+
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-heading font-semibold text-xs text-slate-900 dark:text-white">
+                                        📋 Inventory Audits & Discrepancy Prevention
+                                    </span>
+                                    <span class="text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-2 py-0.5 rounded">
+                                        Audit Integrity
+                                    </span>
+                                </div>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">Conducting regular cycle counts to maintain 99%+ inventory accuracy and prevent stockouts.</p>
+                            </div>
+
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-heading font-semibold text-xs text-slate-900 dark:text-white">
+                                        🔄 Shift Handovers & COD Settlement
+                                    </span>
+                                    <span class="text-[10px] font-semibold text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/50 px-2 py-0.5 rounded">
+                                        Zero Variance
+                                    </span>
+                                </div>
+                                <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">Verifying rider cash collection logs, physical cash balance, and digital handover logs.</p>
+                            </div>
+                        </div>
+
+                        <!-- Live Interactive KPI Calculator / Simulator -->
+                        <div class="p-4 rounded-2xl bg-blue-50/60 dark:bg-blue-950/30 border border-blue-500/20">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-heading font-bold text-xs text-slate-900 dark:text-white">
+                                    ⚡ Operations KPI Calculator
+                                </span>
+                                <span class="text-[10px] font-semibold text-blue-600 dark:text-blue-400">Interactive</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 text-xs">
+                                <div class="p-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center">
+                                    <div class="text-[10px] text-slate-500">Target Fulfillment SLA</div>
+                                    <div class="font-bold text-sm text-blue-600 dark:text-blue-400">98.5%</div>
+                                </div>
+                                <div class="p-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center">
+                                    <div class="text-[10px] text-slate-500">COD Audit Variance</div>
+                                    <div class="font-bold text-sm text-emerald-600 dark:text-emerald-400">0.0% (Matched)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Filterable Operational Projects / Case Studies -->
+        <section id="projects" class="py-20 border-t border-slate-200 dark:border-slate-800 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <span class="text-xs font-semibold text-blue-600 dark:text-blue-400 tracking-wider uppercase">Case Studies & Deliverables</span>
+                    <h2 class="text-3xl sm:text-4xl font-heading font-bold text-slate-900 dark:text-white mt-1">Operational Projects & Analyses</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base mt-2">Documented initiatives reflecting real business problem-solving in retail, MIS reporting, and customer service.</p>
+                </div>
+
+                <!-- Category Filter Buttons -->
+                <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
+                    <button data-filter="all" class="project-filter-btn inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-blue-600 text-white shadow-md shadow-blue-600/20 scale-105">
+                        <span>All Initiatives</span>
+                        <span class="px-1.5 py-0.5 rounded-full text-[10px] bg-white/20 text-white">6</span>
+                    </button>
+                    <button data-filter="retail_operations" class="project-filter-btn inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all glass-panel text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+                        <span>Store & Retail Operations</span>
+                        <span class="px-1.5 py-0.5 rounded-full text-[10px] bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400">2</span>
+                    </button>
+                    <button data-filter="mis_analytics" class="project-filter-btn inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all glass-panel text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+                        <span>MIS & Business Analytics</span>
+                        <span class="px-1.5 py-0.5 rounded-full text-[10px] bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400">2</span>
+                    </button>
+                    <button data-filter="sales_customer" class="project-filter-btn inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all glass-panel text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">
+                        <span>Sales & Customer Support</span>
+                        <span class="px-1.5 py-0.5 rounded-full text-[10px] bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400">2</span>
+                    </button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Case Study 1: Quick-Commerce Dark Store Operations -->
+                    <div class="project-card glass-card rounded-3xl overflow-hidden flex flex-col justify-between border-t-4 border-t-blue-600 shadow-sm" data-category="retail_operations">
+                        <div>
+                            <div class="h-44 bg-gradient-to-br from-blue-700 via-indigo-900 to-slate-950 p-6 flex flex-col justify-between text-white relative">
+                                <div class="flex justify-between items-center">
+                                    <span class="px-2.5 py-1 bg-white/20 backdrop-blur-md rounded-lg text-[11px] font-bold uppercase tracking-wider">
+                                        Flipkart Minutes
+                                    </span>
+                                    <span class="text-xs bg-blue-500/30 px-2 py-0.5 rounded-full">Retail Operations</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-xl text-white">Dark Store SLA & Order Flow Optimization</h3>
+                                    <p class="text-xs text-slate-200 mt-1">High-Velocity Picking & Dispatch Operations</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300 leading-relaxed list-disc list-inside mb-5">
+                                    <li>Monitored dark store order queue to reduce picker turnaround times and maintain strict delivery SLAs.</li>
+                                    <li>Conducted systematic aisle audits to verify inventory counts, minimizing out-of-stock cancellations.</li>
+                                    <li>Managed shift handover protocol ensuring 100% matched reconciliation between dispatch logs and rider COD collections.</li>
+                                </ul>
+                                <div class="flex flex-wrap gap-1.5 mb-2">
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Picking Audits</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">COD Reconciliation</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">SLA Monitoring</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Team Coordination</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 flex gap-3 border-t border-slate-100 dark:border-slate-800/80">
+                            <a href="#contact" class="flex-1 text-center py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold shadow-sm transition-colors">Discuss Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 2: Sales MIS & Revenue Pipeline Tracker -->
+                    <div class="project-card glass-card rounded-3xl overflow-hidden flex flex-col justify-between border-t-4 border-t-emerald-600 shadow-sm" data-category="mis_analytics">
+                        <div>
+                            <div class="h-44 bg-gradient-to-br from-emerald-700 via-teal-900 to-slate-950 p-6 flex flex-col justify-between text-white relative">
+                                <div class="flex justify-between items-center">
+                                    <span class="px-2.5 py-1 bg-white/20 backdrop-blur-md rounded-lg text-[11px] font-bold uppercase tracking-wider">
+                                        SR Info Solution
+                                    </span>
+                                    <span class="text-xs bg-emerald-500/30 px-2 py-0.5 rounded-full">MIS Analytics</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-xl text-white">Sales MIS & Target Performance Reporting</h3>
+                                    <p class="text-xs text-slate-200 mt-1">Excel-Driven KPI Tracking & Variance Analysis</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300 leading-relaxed list-disc list-inside mb-5">
+                                    <li>Architected Excel-based sales MIS reporting system capturing leads, deal stages, and representative conversions.</li>
+                                    <li>Implemented automated Pivot Table summaries and conditional variance alerts for executive decision-makers.</li>
+                                    <li>Synchronized cross-functional operations with delivery teams to ensure timely order dispatch post-closure.</li>
+                                </ul>
+                                <div class="flex flex-wrap gap-1.5 mb-2">
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Advanced MS Excel</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Pivot Tables</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Target Tracking</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Variance Analysis</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 flex gap-3 border-t border-slate-100 dark:border-slate-800/80">
+                            <a href="#contact" class="flex-1 text-center py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold shadow-sm transition-colors">Discuss Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 3: Customer Care & Escalation Triage -->
+                    <div class="project-card glass-card rounded-3xl overflow-hidden flex flex-col justify-between border-t-4 border-t-indigo-600 shadow-sm" data-category="sales_customer">
+                        <div>
+                            <div class="h-44 bg-gradient-to-br from-indigo-700 via-blue-900 to-slate-950 p-6 flex flex-col justify-between text-white relative">
+                                <div class="flex justify-between items-center">
+                                    <span class="px-2.5 py-1 bg-white/20 backdrop-blur-md rounded-lg text-[11px] font-bold uppercase tracking-wider">
+                                        Cyfuture India
+                                    </span>
+                                    <span class="text-xs bg-indigo-500/30 px-2 py-0.5 rounded-full">Customer Operations</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-xl text-white">CRM Data Logging & Complaint Resolution</h3>
+                                    <p class="text-xs text-slate-200 mt-1">High-Touch Support & Quality Monitoring</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300 leading-relaxed list-disc list-inside mb-5">
+                                    <li>Tackled complex incoming customer grievances, maintaining rapid response times and high resolution rates.</li>
+                                    <li>Maintained audit-ready customer database logs, categorizing recurring issues for departmental process feedback.</li>
+                                    <li>Coordinated with technical and logistics teams to execute root-cause remediation on recurring complaints.</li>
+                                </ul>
+                                <div class="flex flex-wrap gap-1.5 mb-2">
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">CRM Database</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Escalation Matrix</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Quality Assurance</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Customer Retention</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 flex gap-3 border-t border-slate-100 dark:border-slate-800/80">
+                            <a href="#contact" class="flex-1 text-center py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold shadow-sm transition-colors">Discuss Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 4: Power BI Business Dashboard -->
+                    <div class="project-card glass-card rounded-3xl overflow-hidden flex flex-col justify-between border-t-4 border-t-amber-600 shadow-sm" data-category="mis_analytics">
+                        <div>
+                            <div class="h-44 bg-gradient-to-br from-amber-700 via-orange-900 to-slate-950 p-6 flex flex-col justify-between text-white relative">
+                                <div class="flex justify-between items-center">
+                                    <span class="px-2.5 py-1 bg-white/20 backdrop-blur-md rounded-lg text-[11px] font-bold uppercase tracking-wider">
+                                        Business Intelligence
+                                    </span>
+                                    <span class="text-xs bg-amber-500/30 px-2 py-0.5 rounded-full">Power BI</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-xl text-white">Retail KPI & Executive Scorecard Dashboard</h3>
+                                    <p class="text-xs text-slate-200 mt-1">Multi-Channel Performance Analytics</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300 leading-relaxed list-disc list-inside mb-5">
+                                    <li>Built interactive Power BI visual dashboards monitoring sales velocity, gross margins, and order fulfillment.</li>
+                                    <li>Formulated DAX measures for dynamic target variance, Year-over-Year (YoY) metrics, and store cluster comparisons.</li>
+                                    <li>Integrated interactive slicers for geographic zones, category breakdowns, and time horizons.</li>
+                                </ul>
+                                <div class="flex flex-wrap gap-1.5 mb-2">
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Power BI</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Data Modeling</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">KPI Scorecards</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Data Visualization</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 flex gap-3 border-t border-slate-100 dark:border-slate-800/80">
+                            <a href="#contact" class="flex-1 text-center py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold shadow-sm transition-colors">Discuss Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 5: Store Inventory Audit Framework -->
+                    <div class="project-card glass-card rounded-3xl overflow-hidden flex flex-col justify-between border-t-4 border-t-teal-600 shadow-sm" data-category="retail_operations">
+                        <div>
+                            <div class="h-44 bg-gradient-to-br from-teal-700 via-emerald-900 to-slate-950 p-6 flex flex-col justify-between text-white relative">
+                                <div class="flex justify-between items-center">
+                                    <span class="px-2.5 py-1 bg-white/20 backdrop-blur-md rounded-lg text-[11px] font-bold uppercase tracking-wider">
+                                        Inventory Audit
+                                    </span>
+                                    <span class="text-xs bg-teal-500/30 px-2 py-0.5 rounded-full">SOP & Compliance</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-xl text-white">Store Audit & Shrinkage Control SOP</h3>
+                                    <p class="text-xs text-slate-200 mt-1">Operational Governance & Loss Prevention</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300 leading-relaxed list-disc list-inside mb-5">
+                                    <li>Implemented standardized operational audit checklists for daily fast-moving SKU physical counts.</li>
+                                    <li>Reduced inventory discrepancies and transit loss through structured shift reconciliation checkpoints.</li>
+                                    <li>Trained floor associate team on compliant stock scanning, bin allocation, and dispatch sealing.</li>
+                                </ul>
+                                <div class="flex flex-wrap gap-1.5 mb-2">
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Inventory Audit</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">SOP Compliance</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Loss Prevention</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Quality Control</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 flex gap-3 border-t border-slate-100 dark:border-slate-800/80">
+                            <a href="#contact" class="flex-1 text-center py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold shadow-sm transition-colors">Discuss Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 6: Sales Funnel & Pipeline Lead Management -->
+                    <div class="project-card glass-card rounded-3xl overflow-hidden flex flex-col justify-between border-t-4 border-t-rose-600 shadow-sm" data-category="sales_customer">
+                        <div>
+                            <div class="h-44 bg-gradient-to-br from-rose-700 via-pink-900 to-slate-950 p-6 flex flex-col justify-between text-white relative">
+                                <div class="flex justify-between items-center">
+                                    <span class="px-2.5 py-1 bg-white/20 backdrop-blur-md rounded-lg text-[11px] font-bold uppercase tracking-wider">
+                                        Sales Strategy
+                                    </span>
+                                    <span class="text-xs bg-rose-500/30 px-2 py-0.5 rounded-full">Funnel Optimization</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-heading font-bold text-xl text-white">End-to-End Lead Pipeline Coordination</h3>
+                                    <p class="text-xs text-slate-200 mt-1">Prospecting, Nurturing & Fulfillment Workflows</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300 leading-relaxed list-disc list-inside mb-5">
+                                    <li>Structured prospect lead cadences and follow-up reminders to accelerate quote-to-close conversion cycles.</li>
+                                    <li>Logged multi-stage interaction notes into central tracker, eliminating communication blind spots.</li>
+                                    <li>Maintained 100% adherence to weekly client follow-up targets while coordinating with back-office execution.</li>
+                                </ul>
+                                <div class="flex flex-wrap gap-1.5 mb-2">
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Sales Coordination</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Funnel Tracking</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Client Engagement</span>
+                                    <span class="px-2.5 py-1 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 rounded-lg text-[11px] font-medium border border-slate-200 dark:border-slate-700/60">Account Fulfillment</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0 flex gap-3 border-t border-slate-100 dark:border-slate-800/80">
+                            <a href="#contact" class="flex-1 text-center py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold shadow-sm transition-colors">Discuss Project</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Technical & Operational Competencies -->
+        <section id="skills" class="py-20 border-t border-slate-200 dark:border-slate-800 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-xs font-semibold text-blue-600 dark:text-blue-400 tracking-wider uppercase">Skill Matrix</span>
+                    <h2 class="text-3xl sm:text-4xl font-heading font-bold text-slate-900 dark:text-white mt-1">Core Competencies & Arsenal</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">Comprehensive skill taxonomy categorized by analytical tools, operational processes, and executive leadership.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    
+                    <!-- 1. Technical & Analytics Tools -->
+                    <div class="glass-card p-6 rounded-3xl flex flex-col justify-between shadow-sm border-t-4 border-t-blue-600">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-xl mb-4">
+                                📊
+                            </div>
+                            <h3 class="font-heading font-bold text-base text-slate-900 dark:text-white mb-3">Technical & Analytics Tools</h3>
+                            <div class="space-y-2.5 text-xs">
+                                <div class="flex justify-between items-center py-1 border-b border-slate-100 dark:border-slate-800/60">
+                                    <span class="font-medium text-slate-700 dark:text-slate-300">Advanced MS Excel</span>
+                                    <span class="text-[11px] font-semibold text-blue-600 dark:text-blue-400">Formulas, XLOOKUP, Pivot</span>
+                                </div>
+                                <div class="flex justify-between items-center py-1 border-b border-slate-100 dark:border-slate-800/60">
+                                    <span class="font-medium text-slate-700 dark:text-slate-300">Power BI</span>
+                                    <span class="text-[11px] font-semibold text-blue-600 dark:text-blue-400">Dashboards & DAX</span>
+                                </div>
+                                <div class="flex justify-between items-center py-1 border-b border-slate-100 dark:border-slate-800/60">
+                                    <span class="font-medium text-slate-700 dark:text-slate-300">MIS Reporting</span>
+                                    <span class="text-[11px] font-semibold text-blue-600 dark:text-blue-400">Weekly & Daily Cadence</span>
+                                </div>
+                                <div class="flex justify-between items-center py-1 border-b border-slate-100 dark:border-slate-800/60">
+                                    <span class="font-medium text-slate-700 dark:text-slate-300">Google Sheets & MS Office</span>
+                                    <span class="text-[11px] font-semibold text-blue-600 dark:text-blue-400">Word, PowerPoint, Outlook</span>
+                                </div>
+                                <div class="flex justify-between items-center py-1 border-b border-slate-100 dark:border-slate-800/60">
+                                    <span class="font-medium text-slate-700 dark:text-slate-300">Data Visualization</span>
+                                    <span class="text-[11px] font-semibold text-blue-600 dark:text-blue-400">Executive Charts & Trends</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-200 dark:border-slate-800 text-[11px] text-slate-500 dark:text-slate-400 font-medium">
+                            Focus: Data-Driven Decision Making
+                        </div>
+                    </div>
+
+                    <!-- 2. Operational & Store Management -->
+                    <div class="glass-card p-6 rounded-3xl flex flex-col justify-between shadow-sm border-t-4 border-t-emerald-600">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xl mb-4">
+                                🏬
+                            </div>
+                            <h3 class="font-heading font-bold text-base text-slate-900 dark:text-white mb-3">Operational Competencies</h3>
+                            <div class="space-y-2.5 text-xs">
+                                <div class="flex justify-between items-center py-1 border-b border-slate-100 dark:border-slate-800/60">
+                                    <span class="font-medium text-slate-700 dark:text-slate-300">Operations Management</span>
+                                    <span class="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">Process Optimization</span>
+                                </div>
+                                <div class="flex justify-between items-center py-1 border-b border-slate-100 dark:border-slate-800/60">
+                                    <span class="font-medium text-slate-700 dark:text-slate-300">Process & Order Coordination</span>
+                                    <span class="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">Order Flow Routing</span>
+                                </div>
+                                <div class="flex justify-between items-center py-1 border-b border-slate-100 dark:border-slate-800/60">
+                                    <span class="font-medium text-slate-700 dark:text-slate-300">KPI Monitoring & Tracking</span>
+                                    <span class="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">SLA Adherence</span>
+                                </div>
+                                <div class="flex justify-between items-center py-1 border-b border-slate-100 dark:border-slate-800/60">
+                                    <span class="font-medium text-slate-700 dark:text-slate-300">Store Audits & Quality Control</span>
+                                    <span class="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">Picking Accuracy</span>
+                                </div>
+                                <div class="flex justify-between items-center py-1 border-b border-slate-100 dark:border-slate-800/60">
+                                    <span class="font-medium text-slate-700 dark:text-slate-300">Shift Handover & COD Audit</span>
+                                    <span class="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">Cash & Dispatch Settlement</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-200 dark:border-slate-800 text-[11px] text-slate-500 dark:text-slate-400 font-medium">
+                            Focus: Execution Rigor & Zero Variance
+                        </div>
+                    </div>
+
+                    <!-- 3. Professional & Behavioral Attributes -->
+                    <div class="glass-card p-6 rounded-3xl flex flex-col justify-between shadow-sm border-t-4 border-t-amber-600">
+                        <div>
+                            <div class="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-xl mb-4">
+                                💡
+                            </div>
+                            <h3 class="font-heading font-bold text-base text-slate-900 dark:text-white mb-3">Managerial & Core Skills</h3>
+                            <div class="space-y-2.5 text-xs">
+                                <div class="flex justify-between items-center py-1 border-b border-slate-100 dark:border-slate-800/60">
+                                    <span class="font-medium text-slate-700 dark:text-slate-300">Analytical Problem Solving</span>
+                                    <span class="text-[11px] font-semibold text-amber-600 dark:text-amber-400">Root Cause Resolution</span>
+                                </div>
+                                <div class="flex justify-between items-center py-1 border-b border-slate-100 dark:border-slate-800/60">
+                                    <span class="font-medium text-slate-700 dark:text-slate-300">Stakeholder Communication</span>
+                                    <span class="text-[11px] font-semibold text-amber-600 dark:text-amber-400">Cross-Team Alignment</span>
+                                </div>
+                                <div class="flex justify-between items-center py-1 border-b border-slate-100 dark:border-slate-800/60">
+                                    <span class="font-medium text-slate-700 dark:text-slate-300">Team Leadership & Handoffs</span>
+                                    <span class="text-[11px] font-semibold text-amber-600 dark:text-amber-400">Floor Coordination</span>
+                                </div>
+                                <div class="flex justify-between items-center py-1 border-b border-slate-100 dark:border-slate-800/60">
+                                    <span class="font-medium text-slate-700 dark:text-slate-300">Time & Priority Management</span>
+                                    <span class="text-[11px] font-semibold text-amber-600 dark:text-amber-400">High-Paced Agility</span>
+                                </div>
+                                <div class="flex justify-between items-center py-1 border-b border-slate-100 dark:border-slate-800/60">
+                                    <span class="font-medium text-slate-700 dark:text-slate-300">Attention to Detail</span>
+                                    <span class="text-[11px] font-semibold text-amber-600 dark:text-amber-400">Data & Record Integrity</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 pt-3 border-t border-slate-200 dark:border-slate-800 text-[11px] text-slate-500 dark:text-slate-400 font-medium">
+                            Focus: High Adaptability & Quick Learning
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Recruiter Inquiry Hub & Contact -->
+        <section id="contact" class="py-20 bg-slate-100/60 dark:bg-slate-900/30 border-t border-slate-200 dark:border-slate-800 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-xs font-semibold text-blue-600 dark:text-blue-400 tracking-wider uppercase">Direct Communication</span>
+                    <h2 class="text-3xl sm:text-4xl font-heading font-bold text-slate-900 dark:text-white mt-1">Get in Touch with Sunny</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mt-2">Available for immediate joining across Operations, Business Analyst, and MIS roles. Open to relocation.</p>
+                </div>
+
+                <div class="grid md:grid-cols-12 gap-10 items-start">
+                    
+                    <!-- Left: Direct Channels (5 Cols) -->
+                    <div class="md:col-span-5 space-y-4">
+                        
+                        <!-- Email -->
+                        <a href="mailto:sunnymksingh17@gmail.com" class="flex items-center gap-4 glass-card p-4 rounded-2xl group shadow-sm hover:border-blue-500 transition-all">
+                            <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-lg group-hover:scale-105 transition-transform">
+                                ✉️
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Primary Email</p>
+                                <p class="text-sm font-semibold text-slate-900 dark:text-white">sunnymksingh17@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <!-- Phone -->
+                        <a href="tel:9599428648" class="flex items-center gap-4 glass-card p-4 rounded-2xl group shadow-sm hover:border-emerald-500 transition-all">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-lg group-hover:scale-105 transition-transform">
+                                📞
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Direct Mobile Phone</p>
+                                <p class="text-sm font-semibold text-slate-900 dark:text-white">+91 9599428648</p>
+                            </div>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com/in/sunny-singh-mba" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 glass-card p-4 rounded-2xl group shadow-sm hover:border-indigo-500 transition-all">
+                            <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-lg group-hover:scale-105 transition-transform">
+                                💼
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">LinkedIn Profile</p>
+                                <p class="text-sm font-semibold text-slate-900 dark:text-white">linkedin.com/in/sunny-singh-mba</p>
+                            </div>
+                        </a>
+
+                        <!-- Naukri -->
+                        <a href="https://naukri.com/mnjuser/profile" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 glass-card p-4 rounded-2xl group shadow-sm hover:border-amber-500 transition-all">
+                            <div class="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-lg group-hover:scale-105 transition-transform">
+                                📋
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Naukri Candidate Profile</p>
+                                <p class="text-sm font-semibold text-slate-900 dark:text-white">naukri.com/mnjuser/profile</p>
+                            </div>
+                        </a>
+
+                        <!-- Location & Joining -->
+                        <div class="flex items-center gap-4 glass-card p-4 rounded-2xl shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center font-bold text-lg">
+                                📍
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Base Location & Availability</p>
+                                <p class="text-sm font-semibold text-slate-900 dark:text-white">Greater Noida, UP • Open to Relocation</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right: Recruiter Inquiry Form (7 Cols) -->
+                    <div class="md:col-span-7">
+                        <div class="glass-card p-8 rounded-3xl shadow-md">
+                            <h3 class="font-heading font-bold text-xl text-slate-900 dark:text-white mb-2">Send an Opportunity / Message</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mb-6">Connect directly with Sunny regarding full-time roles, analyst opportunities, or recruitment drives.</p>
+
+                            <!-- Success / Error Notice -->
+                            <div id="contact-success" class="hidden p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-500/30 text-emerald-800 dark:text-emerald-300 text-sm mb-6 flex items-center gap-3">
+                                <span class="text-xl">✅</span>
+                                <div>
+                                    <p class="font-semibold">Inquiry Sent Successfully!</p>
+                                    <p class="text-xs mt-0.5">Thank you for reaching out. Sunny Singh will respond promptly.</p>
+                                </div>
+                            </div>
+
+                            <form id="contact-form" class="space-y-4">
+                                <div>
+                                    <label for="contact-name" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">Your Name & Organization *</label>
+                                    <input type="text" id="contact-name" name="name" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm transition-all" placeholder="e.g. Talent Acquisition / Operations Manager" />
+                                </div>
+
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="contact-email" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">Email Address *</label>
+                                        <input type="email" id="contact-email" name="email" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm transition-all" placeholder="hr@company.com" />
+                                    </div>
+                                    <div>
+                                        <label for="contact-subject" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">Position / Role Type</label>
+                                        <select id="contact-subject" name="subject" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm transition-all text-slate-700 dark:text-slate-300">
+                                            <option value="Operations Executive / Manager">Operations Executive / Manager</option>
+                                            <option value="Business Analyst Role">Business Analyst Role</option>
+                                            <option value="MIS Reporting Specialist">MIS Reporting Specialist</option>
+                                            <option value="Store / Supply Chain Operations">Store / Supply Chain Operations</option>
+                                            <option value="General Recruitment Inquiry">General Recruitment Inquiry</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="contact-message" class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">Message / Job Description *</label>
+                                    <textarea id="contact-message" name="message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm transition-all resize-none" placeholder="Provide details regarding your requirement, location, or scheduling an interview..."></textarea>
+                                </div>
+
+                                <button type="submit" id="contact-submit-btn" class="w-full py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-md shadow-blue-600/20 transition-all flex items-center justify-center gap-2 disabled:opacity-60">
+                                    <span id="contact-submit-text">Send Message to Sunny</span>
+                                    <span>&rarr;</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-500 dark:text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+            <div class="flex flex-wrap justify-center items-center gap-6 font-medium text-slate-600 dark:text-slate-300">
+                <a href="#hero" class="hover:text-blue-600 transition-colors">Home</a>
+                <a href="#about" class="hover:text-blue-600 transition-colors">About</a>
+                <a href="#journey" class="hover:text-blue-600 transition-colors">Journey</a>
+                <a href="#analytics-hub" class="hover:text-blue-600 transition-colors">Analytics & MIS Hub</a>
+                <a href="#projects" class="hover:text-blue-600 transition-colors">Case Studies</a>
+                <a href="#skills" class="hover:text-blue-600 transition-colors">Skills</a>
+                <a href="https://linkedin.com/in/sunny-singh-mba" target="_blank" class="hover:text-blue-600 transition-colors">LinkedIn</a>
+                <a href="mailto:sunnymksingh17@gmail.com" class="hover:text-blue-600 transition-colors">Email</a>
+            </div>
+            <p>&copy; 2026 Sunny Singh. All rights reserved. MBA (Operations) — Mangalmay Institute of Management and Technology ('27).</p>
+            <p class="text-[11px] text-slate-400 dark:text-slate-500">Greater Noida, Uttar Pradesh, India • Immediate Joining & Open to Relocation</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top" class="fixed bottom-6 right-6 w-11 h-11 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg hidden items-center justify-center z-50 transition-all hover:scale-110">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <!-- Client-Side Reactive Interaction Script -->
+    <script>
+        // 1. Theme Management (Light / Dark)
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlEl = document.documentElement;
+
+        function applyTheme(isDark) {
+            if (isDark) {
+                htmlEl.classList.add('dark');
+                if (themeIcon) themeIcon.textContent = '☀️';
+                localStorage.theme = 'dark';
+            } else {
+                htmlEl.classList.remove('dark');
+                if (themeIcon) themeIcon.textContent = '🌙';
+                localStorage.theme = 'light';
+            }
+        }
+
+        const initialDark = localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        applyTheme(initialDark);
+
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                applyTheme(!htmlEl.classList.contains('dark'));
+            });
+        }
+
+        // 2. Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            });
+        }
+
+        // 3. Tabbed Journey Switcher (Experience vs Education)
+        const tabBtnExp = document.getElementById('tab-btn-exp');
+        const tabBtnEdu = document.getElementById('tab-btn-edu');
+        const tabPanelExp = document.getElementById('tab-panel-exp');
+        const tabPanelEdu = document.getElementById('tab-panel-edu');
+
+        function switchJourneyTab(tab) {
+            if (tab === 'exp') {
+                tabPanelExp.classList.remove('hidden');
+                tabPanelEdu.classList.add('hidden');
+                tabBtnExp.className = 'journey-tab-btn flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-md';
+                tabBtnEdu.className = 'journey-tab-btn flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white';
+            } else {
+                tabPanelEdu.classList.remove('hidden');
+                tabPanelExp.classList.add('hidden');
+                tabBtnEdu.className = 'journey-tab-btn flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-md';
+                tabBtnExp.className = 'journey-tab-btn flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white';
+            }
+        }
+
+        if (tabBtnExp && tabBtnEdu) {
+            tabBtnExp.addEventListener('click', () => switchJourneyTab('exp'));
+            tabBtnEdu.addEventListener('click', () => switchJourneyTab('edu'));
+        }
+
+        // 4. Interactive Project Category Filter
+        const filterBtns = document.querySelectorAll('.project-filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+
+                // Update Button Active Styling
+                filterBtns.forEach(b => {
+                    b.className = 'project-filter-btn inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all glass-panel text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white';
+                    const countPill = b.querySelector('span:last-child');
+                    if (countPill) countPill.className = 'px-1.5 py-0.5 rounded-full text-[10px] bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400';
+                });
+
+                btn.className = 'project-filter-btn inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-blue-600 text-white shadow-md shadow-blue-600/20 scale-105';
+                const activeCountPill = btn.querySelector('span:last-child');
+                if (activeCountPill) activeCountPill.className = 'px-1.5 py-0.5 rounded-full text-[10px] bg-white/20 text-white';
+
+                // Filter Cards
+                projectCards.forEach(card => {
+                    const cardCat = card.getAttribute('data-category');
+                    if (filter === 'all' || cardCat === filter) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // 5. Contact Form Handler (Direct Mailto / UX feedback)
+        const contactForm = document.getElementById('contact-form');
+        const contactSuccess = document.getElementById('contact-success');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('contact-name').value;
+                const email = document.getElementById('contact-email').value;
+                const subject = document.getElementById('contact-subject').value;
+                const message = document.getElementById('contact-message').value;
+
+                contactSuccess.classList.remove('hidden');
+
+                // Generate formatted mailto fallback for direct email client
+                const mailtoUrl = `mailto:sunnymksingh17@gmail.com?subject=${encodeURIComponent(subject + ' - ' + name)}&body=${encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message)}`;
+                window.location.href = mailtoUrl;
+
+                contactForm.reset();
+            });
+        }
+
+        // 6. Back to Top Button
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.remove('hidden');
+                backToTopBtn.classList.add('flex');
+            } else {
+                backToTopBtn.classList.add('hidden');
+                backToTopBtn.classList.remove('flex');
+            }
+        });
+        if (backToTopBtn) {
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
+</body>
+</html>
